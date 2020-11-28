@@ -14,5 +14,5 @@ find_package(nlohmann_json 3.2.0 REQUIRED)
 
 set(SPECIAL_OS_LIBS "pthread")
 
-add_subdirectory(web-scraper)
+add_subdirectory(web-tools)
 add_subdirectory(tests)

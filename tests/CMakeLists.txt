@@ -48,7 +48,7 @@ ADD_EXECUTABLE(${PROJECT_NAME} ${SRCS} ${HEADERS})
 TARGET_LINK_LIBRARIES(${PROJECT_NAME}
         libgtest
         httplib::httplib
-        mod::scraper
+        mod::web
         )
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})

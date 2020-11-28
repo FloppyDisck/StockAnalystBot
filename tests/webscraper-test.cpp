@@ -1,14 +1,14 @@
 #include <iostream>
 #include <gtest/gtest.h>
-#include "webscraper/webscraper.hpp"
+#include "redditscraper/redditscraper.hpp"
 #include <map>
 
 TEST(WEBSCRAPER, REDDIT_GET) {
-    WebScraper scraper;
+    RedditScraper scraper;
     std::map<std::string, int> tickers;
     //1606489200
     //1606507200
-    auto posts = scraper.get(apis::reddit, 1606485600, 1606507200, "wallstreetbets,investing,smallstreetbets", "", tickers);
+    auto posts = scraper.get(1606485600, 1606507200, "wallstreetbets,investing,smallstreetbets", "", tickers);
     std::cout << posts.size() << std::endl;
     for (const auto& post : posts) {
         std::cout << post.title << std::endl;
